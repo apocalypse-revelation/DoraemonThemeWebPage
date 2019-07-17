@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>哆啦a梦主11题网</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--jquery-->
+    <script src="js/jquery-3.3.1.min.js">
+    </script>
+    <script type="text/javascript" src="js/test.js"></script>
+    <!--图片弹窗js-->
+    <script>
+        // 获取弹窗
+        var modal = document.getElementById('myModal');
+        // 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        img.hover = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        // 获取 <span> 元素，设置关闭按钮写
+        var span = document.getElementsByClassName("close")[0];
+
+        // 当点击 (x), 关闭弹窗
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+    <script>
+        /* 点击按钮，下拉菜单在 显示/隐藏 之间切换 */
+        function downFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // 点击下拉菜单意外区域隐藏
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <!--底部提示js-->
+   <script>
+       function myFunction() {
+           var x = document.getElementById("snackbar")
+           x.className = "show";
+           setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+       }
+   </script>
+    <!--点击哆啦A梦返回顶部js-->
+    <script>
+        // 当网页向下滑动 20px 出现"返回顶部" 按钮
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {console.log(121);
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("stickyDora").style.display = "block";
+            } else {
+                document.getElementById("stickyDora").style.display = "none";
+            }
+        }
+
+        // 点击按钮，返回顶部
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!--老师的轮播js代码-->
+    <script type="text/javascript">
+        window.onload = function(){
+            var wrap = document.getElementById("wrap");
+            var pic = document.getElementById("pic").getElementsByTagName("li");
+            var list = document.getElementById("list").getElementsByTagName("li");
+            var index = 0;
+//     	var timer = null;
+            for(var i=0;i<list.length;i++){
+                pic[i].style.zIndex=50-i;
+            }
+            document.getElementById("list").style.zIndex=51;
+
+
+//     	timer = window.setInterval(autoPlay,2000);
+
+            for(var i=0;i<list.length;i++){
+                list[i].onclick=function(){
+//     			clearInterval(timer);
+                    index=this.innerText-1;
+                    showImage(index);
+//     			timer=window.setInterval(autoPlay,2000);
+                }
+            }
+
+//     	function autoPlay(){
+//     		if(++index >= list.length) index = 0;
+//     		showImage(index);
+//     	}
+
+            function showImage(curIndex){
+                for(var i = 0;i < list.length;i ++){
+                    pic[i].style.opacity=0;
+                    list[i].className = "";
+
+                }
+//     		pic[curIndex].style.opacity = 1;
+                changeOpacity(curIndex);
+                list[curIndex].className = "on";
+            }
+
+            function changeOpacity(curIndex){
+                var timer2=null;
+                if(pic[curIndex].style.opacity>=1.0){
+                    clearTimeout(timer2);
+                }
+                else{
+                    pic[curIndex].style.opacity=parseFloat(pic[curIndex].style.opacity)+0.01;
+                    timer2=window.setTimeout(function(){
+                        changeOpacity(curIndex);
+                    },20);
+                }
+            }
+        }
+    </script>
+    <meta name="description" content="大作业之Blog样式">
+    <meta name="keywords" content="fabulous,marvelous,wonderful">
+</head>
+<body>
+<!--顶部导航0-->
+<div id="topAll">
+    <div id="topCenter">
+        <!--logo链接-->
+        <a id="alogo" href="index.html">
+            <img src="img/doralogo.png" >
+        </a>
+        <!--右侧导航栏-->
+        <div id="nav">
+            <ul>
+                <li>
+                    <a href="" class="on" style="background-color: #6cc5dc;
+    border-radius: 10px;">首页</a>
+                </li>
+                <li>
+                    <a href="DoraInformation.html">作品</a>
+                </li>
+                <li>
+                    <a href="DoraVideo.html">官网</a>
+                </li>
+                <li>
+                    <a href="">留言</a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a onclick="downFunction()" class="dropbtn" >关于本站</a>
+                        <div id="myDropdown" class="dropdown-content">
+                            <img src="img/qrcode.jpg" width="200" height="200">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--顶部导航结束-->
+<!--stickyDora飞行图片-->
+<div id="stickyDora" style="display: block">
+    <img onclick="topFunction()" src="img/pagetop.png">
+</div>
+<!--中部内容1-->
+<div id="infoAll">
+    <!--左侧内容1.1-->
+    <div id="infoLeft">
+        <!--轮播1.1.1-->
+        <div   class="wrap">
+            <!--轮播主页1.1.1.1-->
+            <ul id="pic">
+            <li><img src="./img/lb1.jpg" alt=""></li>
+            <li><img src="./img/lb2.jpg" alt=""></li>
+            <li><img src="./img/lb3.jpg" alt=""></li>
+            <li><img src="./img/lb4.jpg" alt=""></li>
+            </ul>
+            <!--轮播右侧导航1.1.1.2-->
+            <ol id="list">
+                <li class="on"><img src="./img/lb1.jpg" alt="">1</li>
+                <li><img src="./img/lb2.jpg" alt="">2</li>
+                <li><img src="./img/lb3.jpg" alt="">3</li>
+                <li><img src="./img/lb4.jpg" alt="">4</li>
+            </ol>
+        </div>
+        <!--左侧的新闻版块-->
+        <div id="news">
+            <!--添加三个新闻项目-->
+            <!--第一个新闻-->
+            <div id="newsItem1" class="newsItem">
+                <a href="">
+                    <img src="./img/xw1.jpg">
+                </a>
+                <h4>哆啦A梦2018年大电影，六一上映</h4>
+                <p>2018年哆啦A梦大电影如约而至，在六一儿童节献上《哆啦A梦：大雄的...</p>
+                <!--新闻项目下面的时间和查看链接-->
+                <div>
+                    <span class="newsDate">12-25</span>
+                    <a class="intoInf" href="">查看</a>
+                </div>
+            </div>
+            <!--第二个新闻-->
+            <div id="newsItem2" class="newsItem">
+                <a href="">
+                    <img src="./img/xw2.jpg">
+                </a>
+                <h4>《哆啦A梦：伴我同行》</h4>
+                <p>学习、体育全不擅长还饱受胖虎和小夫欺负的少年野比大雄在20世纪...</p>
+                <!--新闻项目下面的时间和查看链接-->
+                <div>
+                    <span class="newsDate">12-26</span>
+                    <a class="intoInf" href="">查看</a>
+                </div>
+            </div>
+            <!--第三个新闻-->
+            <div id="newsItem3" class="newsItem">
+                <a href="">
+                    <img src="./img/xw3.jpg">
+                </a>
+                <h4>KFC推出儿童节哆啦A梦套餐</h4>
+                <p>2018年儿童节前后，肯德基推出“儿童节哆啦A梦套餐”以及哆啦A梦...</p>
+                <!--新闻项目下面的时间和查看链接-->
+                <div>
+                    <span class="newsDate">12-27</span>
+                    <a class="intoInf" href="">查看</a>
+                </div>
+            </div>
+        </div>
+        <!--新闻模块结束-->
+        <!--电影介绍模块-->
+        <div id="article">
+            <!--文章标题-->
+            <h3>剧场电影
+                <!--<a class="more" title="更多" href="https://www.pengyaou.com/homeart"></a>-->
+            </h3>
+            <!--文章列表-->
+            <div id="articleList">
+                <!--1111111111111111111111111111111111111111111111111单个文章项：第一个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                            <!-- 触发弹窗 - 图片改为你的图片地址 -->
+                            <img src="img/article1.jpg">
+                    </div>
+                    <!--&lt;!&ndash; 弹窗 &ndash;&gt;-->
+                    <!--<div id="myModal" class="modal">-->
+                        <!--&lt;!&ndash; 关闭按钮 &ndash;&gt;-->
+                        <!--<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>-->
+                        <!--&lt;!&ndash; 弹窗内容 &ndash;&gt;-->
+                        <!--<img class="modal-content" id="img01">-->
+                    <!--</div>-->
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄的恐龙</h4>
+                    </div>
+                </div>
+                <!--2222222222222222222222222222222222222222222222222单个文章项：第二个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article2.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄的宇宙开拓史</h4>
+                    </div>
+                </div>
+                <!--单个文章项：第三个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article3.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄的大魔境</h4>
+                    </div>
+                </div>
+                <!--单个文章项：第四个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article4.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄的海底鬼岩城</h4>
+                    </div>
+                </div>
+                <!--单个文章项：第五个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article5.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄的魔界大冒险</h4>
+                    </div>
+                </div>
+                <!--单个文章项：第六个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article6.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄的宇宙小战争</h4>
+                    </div>
+                </div>
+                <!--单个文章项：第七个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article7.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄与铁人兵团</h4>
+                    </div>
+                </div>
+                <!--单个文章项：第八个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article8.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄与龙骑士</h4>
+                    </div>
+                </div>
+                <!--单个文章项：第九个-->
+                <div class="articleItem">
+                    <!--文章项的图片-->
+                    <div class="articleItemImage">
+                        <a href=""><img src="img/article9.jpg"></a>
+                    </div>
+                    <!--文章项的文字信息-->
+                    <div class="articleItemInformation">
+                        <h4>大雄的平行西游记</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--右侧内容1.2-->
+    <div id="infoRight">
+
+        <!--做个搜索吧(搜索+热门关键词）-->
+        <div id="search">
+            <!--搜索顶部：真·搜索-->
+            <div id="searchTop">
+                <!--输入框-->
+                <input type="text" placeholder="信息搜索">
+                <!--搜索图标-->
+                <div id="searchIcon">
+                    <img src="img/search-icon1.png">
+                </div>
+            </div>
+            <!--搜索热门词区域-->
+            <div id="searchHot">
+                <a href="index.html">哆啦A梦</a>
+                <a href="index.html">大雄</a>
+                <a href="index.html">静香</a>
+                <a href="index.html">机器猫</a>
+                <a href="index.html">剧场版</a>
+                <a href="index.html">大电影</a>
+                <a href="index.html">大雄的恐龙</a>
+                <a href="index.html">壁纸</a>
+                <a href="index.html">新番</a>
+                <a href="index.html">平行西游</a>
+                <a href="index.html">大雄的宝岛</a>
+                <a href="index.html">人物</a>
+                <a href="index.html">时光机</a>
+                <a href="index.html">竹蜻蜓</a>
+                <a href="index.html">漫画</a>
+                <a href="index.html">不二雄</a>
+                <a href="index.html">小学馆</a>
+                <a href="index.html">胖虎</a>
+                <a href="index.html">后山</a>
+                <a href="index.html">野比大雄</a>
+                <a href="index.html">小夫</a>
+                <a href="index.html">魔界</a>
+                <a href="index.html">小叮当</a>
+                <a href="index.html">小说</a>
+            </div>
+        </div>
+        <!--特别篇-->
+        <div id="specialCharter">
+            <h3>特别篇章</h3>
+            <div class="specialList">
+                <ul>
+                    <li>
+                        <a href="index.html">2006，大雄，再见。哆啦A梦要回未来了</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2007，哆啦A梦的重生之日</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2008，哆啦A梦的青之泪</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2009，哆啦A梦漫长的一天</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2010，决战。猫型机器人VS犬型机器人</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2011，跑起来哆啦A梦。银河大奖赛</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2012，感恩监狱大逃脱</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2013，深夜中的巨大哆啦狸猫</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2014，地底100英里小型大作战</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--分享链接-->
+        <div id="outLink">
+            <h3>分享链接</h3>
+            <div id="outLinkList">
+                <div class="outLinkItem">
+                    <a href="index.html"><img src="img/baidu.png"></a>
+                </div>
+                <div class="outLinkItem">
+                    <a href="index.html"><img src="img/tuite.png"></a>
+                </div>
+                <div class="outLinkItem">
+                    <a href="index.html"><img src="img/zhihu.png"></a>
+                </div>
+                <div class="outLinkItem">
+                    <a href="index.html"><img src="img/appstore.png"></a>
+                </div>
+            </div>
+            <h3></h3>
+        </div>
+        <!--友情链接-->
+        <div id="outLink1">
+            <h3>友情链接</h3>
+            <div id="outLinkList1">
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq1.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq2.jpg"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq3.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq4.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq5.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq6.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq7.jpg"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq10.jpg"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq13.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq14.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq15.jpg"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq16.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq17.jpg"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq18.jpg"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq19.png"></a>
+                </div>
+                <div class="outLinkItem1">
+                    <a href="index.html"><img src="img/yq20.jpg"></a>
+                </div>
+            </div>
+            <h3></h3>
+        </div>
+    </div>
+</div>
+<!--底部人物导航内容-->
+<div id="character">
+<h3 id="characterTopic">剧情人物</h3>
+    <div id="characterList">
+        <!--111第一个人物：大雄-->
+        <div class="characterItem">
+            <!--上部div：人物头像和名字-->
+            <div class="characterItemTop">
+                <img src="img/daxiong.jpg">
+                <h3>大雄</h3>
+            </div>
+            <!--下部div:人物介绍链接-->
+            <div class="characterItemBottom">
+                <ul>
+                    <li>
+                        <a href="index.html">大雄·人物介绍</a>
+                        <span>12-25</span>
+                    </li>
+                    <li>
+                        <a href="index.html">客观分析静香最终选择大雄的原因</a>
+                        <span>12-25</span>
+                    </li>
+                    <li>
+                        <a href="index.html">活在时光隧道的人：浅析大雄的奶奶</a>
+                        <span>12-25</span>
+                    </li>
+                    <li>
+                        <a href="index.html">大雄心中的大雄（个人盘点）</a>
+                        <span>12-19</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <!--222第二个人物：静香-->
+            <div class="characterItem">
+                <!--上部div：人物头像和名字-->
+                <div class="characterItemTop">
+                    <img src="img/jingxiang.jpg">
+                    <h3>静香</h3>
+                </div>
+                <!--下部div:人物介绍链接-->
+                <div class="characterItemBottom">
+                    <ul>
+                        <li>
+                            <a href="index.html">静香·人物介绍</a>
+                            <span>12-06</span>
+                        </li>
+                        <li>
+                            <a href="index.html">客观分析静香最终选择大雄的原因</a>
+                            <span>12-06</span>
+                        </li>
+                        <li>
+                            <a href="index.html">精美人物壁纸</a>
+                            <span>12-05</span>
+                        </li>
+                        <li>
+                            <a href="index.html">静香性格分析</a>
+                            <span>12-01</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                <!--333第三个人物：胖虎-->
+                <div class="characterItem">
+                    <!--上部div：人物头像和名字-->
+                    <div class="characterItemTop">
+                        <img src="img/panghu.jpg">
+                        <h3>胖虎</h3>
+                    </div>
+                    <!--下部div:人物介绍链接-->
+                    <div class="characterItemBottom">
+                        <ul>
+                            <li>
+                                <a href="index.html">胖虎·人物介绍</a>
+                                <span>12-11</span>
+                            </li>
+                            <li>
+                                <a href="index.html">你知道吗：胖虎配音演员</a>
+                                <span>12-07</span>
+                            </li>
+                            <li>
+                                <a href="index.html">一张表总结胖虎的人际关系</a>
+                                <span>12-04</span>
+                            </li>
+                            <li>
+                                <a href="index.html">胖虎唱歌mp3实录</a>
+                                <span>11-23</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <!--444第四个人物：小夫-->
+                    <div class="characterItem">
+                        <!--上部div：人物头像和名字-->
+                        <div class="characterItemTop">
+                            <img src="img/xiaofu.jpg">
+                            <h3>小夫</h3>
+                        </div>
+                        <!--下部div:人物介绍链接-->
+                        <div class="characterItemBottom">
+                            <ul>
+                                <li>
+                                    <a href="index.html">小夫·人物介绍</a>
+                                    <span>12-21</span>
+                                </li>
+                                <li>
+                                    <a href="index.html">通过比例分析测算小夫的嘴的长度</a>
+                                    <span>12-18</span>
+                                </li>
+                                <li>
+                                    <a href="index.html">小夫家到底有多少钱</a>
+                                    <span>11-14</span>
+                                </li>
+                                <li>
+                                    <a href="index.html">小夫和出木杉的关系</a>
+                                    <span>11-09</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    </div>
+</div>
+<!--底部footer-->
+<div class="footer">
+    <!--主要内容-->
+    <div class=" footerInfo">
+        <!--第一块信息-->
+        <div class="footerInfoItem">
+            <h3>分类</h3>
+            <p><a href="index.html">热门消息</a></p>
+            <p><a href="index.html">剧场电影</a></p>
+            <p><a href="index.html">剧情人物</a></p>
+        </div>
+        <!--第二块信息-->
+        <div class="footerInfoItem">
+            <h3>导航</h3>
+            <p><a href="index.html">关于本站</a></p>
+            <p><a onclick="myFunction()">联系作者</a></p>
+            <p><a href="index.html">网站反馈</a></p>
+        </div>
+        <!--第三块信息：我的说明-->
+        <div id="personalDescription">
+            <h3 id="authorName">作者：陈维</h3>
+            <p>此网站以Blog为原型，灵感来自于各大Blog网站，尤其是Wordpress的各式主题。
+                做这个网站的目的就是为了来应付大作业。本来模仿CSDN和W3Cschool，做了个Header和Banner都麻烦得不得了，故折中后有了它。
+                一个——多啦A梦主题网。
+            </p>
+        </div>
+    </div>
+    <!--最最最最底部-->
+    <div id="finalModule">
+        <p>
+            <span>31602104</span>
+            |
+            <span>陈维</span>
+        </p>
+        <p>
+            Copyright © 2018 Web. All Rights Reserved.
+        </p>
+    </div>
+    <!--底部文本-->
+    <div id="snackbar">QQ:2972221373</div>
+</div>
+</body>
+</html>
