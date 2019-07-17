@@ -1,0 +1,220 @@
+*
+{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    font-family: Arial,微软雅黑;
+    background: #00a8f4 url("../img4page1/PC_header_lower_doraemon.png") 755px 445px no-repeat;
+}
+#topAll{
+    width:1900px;
+    margin: 10px auto;
+    height:120px;
+    background-color: #00a8f4;
+    border-bottom: 1px solid #e3e3e3;
+}
+#alogo
+{
+    float: left;
+    margin: 0px auto;
+    position: relative;
+    left: 500px;
+}
+#alogo img
+{
+
+    height: 90px;
+}
+#nav
+{
+    position: relative;
+    float: right;
+    right: 650px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#nav ul li
+{
+    float: left;
+}
+#nav ul li a{
+    display: inline-block;
+    padding:20px;
+    height: 65px;
+    line-height: 60px;
+    color: #fff;
+}
+#nav ul li a:hover{
+    background-color: #6cc5dc;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px
+}
+/*主体*/
+#video
+{
+    margin: 190px auto;
+    width: 993px;
+    left: 20px;
+
+}
+#videoSlide
+{
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 9px solid #e3e3e3;
+    background-color: white;
+}
+/*信息*/
+.news
+{
+    margin: 0 auto;
+
+}
+.newsItem
+{
+    float: left;
+    width: 276px;
+    height: 310px;
+    margin: 22px;
+    border-radius: 10px;
+}
+.newsItem h4
+{
+    text-align: left;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    background-color: #ff0000;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+}
+
+
+.newsItem img
+{
+    width: 260px;
+    height: 200px;
+    padding-top: 10px;
+    margin: 0 9px;
+    border-radius: 15px;
+}
+.newsItem h4
+{
+    margin-bottom: 20px;
+}
+.newsItem p
+{
+    margin-left: 20px;
+    width: 80%;
+    font-size: 12px;
+}
+.newsItem div
+{
+    margin-top: 30px;
+}
+
+.buttonDownload
+{
+    position: relative;
+    background-color: #ff6666;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: lighter;
+    box-shadow: 0px 5px 2px #cc6666;
+    color: white;
+}
+.buttonDownload h3
+{
+    position: relative;
+    top: 8px;
+}
+.buttonDownload:hover
+{
+    transform: scale(1.1);
+}
+
+.footer
+{
+    width: 1900px;
+    margin: 20px auto;
+    border-top: 1px solid #e3e3e3;
+}
+.footerInfo
+{
+    width: 100%;
+    margin:0 auto;
+    height: 150px;
+}
+.footerInfoItem
+{
+    float: left;
+    margin: 10px 170px;
+    padding: 0 50px 0;
+}
+.footerInfoItem p
+{
+    padding-top: 10px;
+    font-size: 13px;
+}
+.footerInfoItem h3
+{
+    font-weight: normal;
+}
+.footerInfoItem p a:link
+{
+    color: black;
+}
+.footerInfoItem p a:visited
+{
+    color: black;
+}
+.footerInfoItem p a:hover
+{
+    color: #00c1de;
+}
+#personalDescription
+{
+    float: left;
+    width: 440px;
+    margin: 10px 230px;
+}
+#personalDescription h3
+{
+    text-align: center;
+    font-weight: lighter;
+}
+#personalDescription p
+{
+    text-indent: 50px;
+    font-size: 15px;
+}
+#finalModule
+{
+    border-top: 1px solid #e3e3e3;
+    width: 1900px;
+    height: 60px;
+    background-color: #00a0e9;
+    position: absolute;
+}
+#finalModule p
+{
+    text-align: center;
+    color: #606a74;
+    padding: 3px;
+}
+#bottomBackground img
+{
+    width: 100%;
+}

@@ -1,0 +1,285 @@
+*
+{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    font-family: Arial,微软雅黑;
+    background: #00a8f4 url("../img4doraVideo/blink.gif") 350px 155px no-repeat;
+}
+#topAll{
+    width:1900px;
+    margin: 10px auto;
+    height:120px;
+    background-color: #00a8f4;
+    border-bottom: 1px solid #e3e3e3;
+}
+#alogo
+{
+    float: left;
+    margin: 0px auto;
+    position: relative;
+    left: 400px;
+}
+#alogo img
+{
+
+    height: 90px;
+}
+#nav
+{
+    position: relative;
+    float: right;
+    right: 710px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#nav ul li
+{
+    float: left;
+}
+#nav ul li a{
+    display: inline-block;
+    padding:20px;
+    height: 65px;
+    line-height: 60px;
+    color: #fff;
+}
+#nav ul li a:hover{
+    background-color: #6cc5dc;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px
+}
+
+/*banner*/
+
+#topDecorationContainer
+{
+    padding: 0 0 8px 0;
+    width: 1172px;
+    margin: 300px auto 0;
+    background: #e60000;
+}
+#banner
+ {
+    height: 10px;
+    margin: 50px auto;
+ }
+#banner:before, #banner:after
+{
+    content: '';
+    top: 499px;
+    position: absolute;
+    border: solid transparent;
+}
+#banner:before
+{
+    border-width: 0 15px 20px 0;
+    border-right-color: #600000;
+}
+#banner:after {
+    right: 365px;
+    border-width: 20px 15px 0 0;
+    border-top-color: #600000;
+}
+/*视频区*/
+
+#video
+{
+    width: 60%;
+    margin: 0px auto;
+
+}
+#videoSlide
+{
+    display: block;
+    height: 1500px;
+    width: 1124px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-left: 9px solid #e3e3e3;
+    border-right: 9px solid #e3e3e3;
+    border-bottom: 9px solid #e3e3e3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+}
+#videoSlideTitle img
+{
+    width: 150px;
+    height: 50px;
+    margin-left: 420px;
+    margin-top: 10px;
+}
+/*电影*/
+.newsItem
+{
+    float: left;
+    width: 300px;
+    height: 310px;
+    margin: 12px 35px;
+    border-radius: 10px;
+    border: 2px solid #e3e3e3;
+}
+.newsItem a
+{
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+}
+.newsItem h4
+{
+    text-align: left;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    background-color: #ff0000;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+}
+
+
+.newsItem img
+{
+    width: 260px;
+    height: 200px;
+    padding-top: 10px;
+    margin: 0 18px;
+
+}
+.newsItem img:hover
+{
+    opacity: 0.4;
+}
+.newsItem h4
+{
+    margin: 10px 20px;
+}
+.newsItem p
+{
+    margin-left: 20px;
+    width: 80%;
+    font-size: 12px;
+}
+.newsItem div
+{
+    margin-top: 30px;
+}
+/*视频分页*/
+.classSpecify
+{
+    width: 800px;
+    margin: 30px auto;
+    text-align:center;
+}
+
+.pageNumType  a
+{
+    display:inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:15px 15px;
+    background-color: #ffffff;
+    font-size:32px;
+    color: grey;
+    margin-bottom: 10px;
+}
+.aa:hover
+{
+    background:#5bb4ee;
+    border-radius: 10px;
+}
+#pre img
+{
+    margin-top: 10px;
+}
+#next img
+{
+    margin-top: 10px;
+}
+#first
+{
+    background:#5bb4ee;
+    color:#ffffff;
+    border-radius: 10px;
+}
+
+
+.footer
+{
+    width: 1900px;
+    margin: 20px auto;
+    border-top: 1px solid #e3e3e3;
+}
+.footerInfo
+{
+    width: 100%;
+    margin:0 auto;
+    height: 150px;
+}
+.footerInfoItem
+{
+    float: left;
+    margin: 10px 170px;
+    padding: 0 50px 0;
+}
+.footerInfoItem p
+{
+    padding-top: 10px;
+    font-size: 13px;
+}
+.footerInfoItem h3
+{
+    font-weight: normal;
+}
+.footerInfoItem p a:link
+{
+    color: black;
+}
+.footerInfoItem p a:visited
+{
+    color: black;
+}
+.footerInfoItem p a:hover
+{
+    color: #00c1de;
+}
+#personalDescription
+{
+    float: left;
+    width: 440px;
+    margin: 10px 230px;
+}
+#personalDescription h3
+{
+    text-align: center;
+    font-weight: lighter;
+}
+#personalDescription p
+{
+    text-indent: 50px;
+    font-size: 15px;
+}
+#finalModule
+{
+    border-top: 1px solid #e3e3e3;
+    width: 1900px;
+    height: 60px;
+    background-color: #00a0e9;
+    position: absolute;
+}
+#finalModule p
+{
+    text-align: center;
+    color: #606a74;
+    padding: 3px;
+}
+#bottomBackground img
+{
+    width: 100%;
+}

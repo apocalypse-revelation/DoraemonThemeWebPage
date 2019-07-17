@@ -1,0 +1,774 @@
+*
+{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    background-image: url("../img/bg.jpg");
+    font-family: Arial,微软雅黑;
+}
+
+#topAll{
+    width:1900px;
+    margin: 0 auto;
+    height:105px;
+    background-color:#00c1de;
+}
+#alogo
+{
+    float: left;
+    margin: 0px auto;
+    position: relative;
+    left: 500px;
+}
+#alogo img
+{
+
+    height: 90px;
+}
+#nav
+{
+    position: relative;
+    float: right;
+    right: 650px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#nav ul li
+{
+    float: left;
+}
+#nav ul li a{
+    display: inline-block;
+    padding:20px;
+    height: 65px;
+    line-height: 60px;
+    color: #fff;
+}
+.dropdown a{
+    display: inline-block;
+    padding:20px;
+    height: 75px;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bolder;
+}
+#nav ul li a:hover{
+    background-color: #6cc5dc;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#infoAll
+{
+    width:1400px;
+    margin: 35px auto 0;
+    overflow: hidden;
+}
+#infoLeft
+{
+    float: left;
+    width: 830px;
+}
+#infoRight
+{
+    float: right;
+    width: 530px;
+    height: 1400px;
+}
+/*轮播框架*/
+.wrap
+{
+    position: relative;
+    width:810px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+/*轮播全图*/
+.wrap ul{
+    position:absolute;
+    margin-right: 2px;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+/*轮播的具体图片*/
+.wrap ul img{
+    width:790px;
+    height: 330px;
+    border-radius: 10px;
+}
+/*也是具体图标，用来设置轮播*/
+.wrap ul li{
+    position: absolute;
+}
+/*ol：轮播导航小图标*/
+/*小图标的总框架*/
+.wrap ol{
+    position: absolute;
+    right:10px;
+    width:120px;
+    height: 330px;
+    top: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.wrap ol li{
+    height:65px;
+    width: 100px;
+    border:solid 2px white;
+    border-radius:10px;
+    margin: 2px 8px 8px;
+    color:#fff;
+    overflow: hidden;
+    float:left;
+    line-height: 50px;
+    text-align:center;
+
+}
+.wrap ol li:hover
+{
+    opacity: 0.8;
+    cursor:pointer;
+}
+.wrap ol li img{
+    height: 60px;
+    width: 190px;
+}
+.wrap ol .on{
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+}
+#news
+{
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border:1px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.newsItem
+{
+    float: left;
+    width: 275px;
+    height: 410px;
+    border-left: 1px solid #e3e3e3;
+}
+.newsItem h4
+{
+    padding: 5px 5px;
+    text-align: center;
+    border-top: 1px solid #e3e3e3;
+}
+.newsItem:hover
+{
+    box-shadow:0 0 25px #e3e3e3 inset;
+    transition-duration: 0.1s;
+}
+
+.newsItem img
+{
+    width: 260px;
+    height: 250px;
+    padding-top: 10px;
+    margin: 0 9px;
+    border-radius: 12px;
+    border-right: 3px solid #e3e3e3;
+    border-bottom: 5px solid #e3e3e3;
+
+}
+.newsItem img:hover
+{
+    opacity: 0.8;
+}
+.newsItem p
+{
+    text-indent: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+}
+.newsItem div
+{
+    margin-top: 20px;
+}
+/*设置新闻模块：查看按钮和日期的位置*/
+.newsItem div a
+{
+    padding:5px 20px 5px 20px;
+    margin-left: 115px;
+    color: #fff;
+    background-color: #E84646;
+    border-radius: 2em;
+}
+.newsItem .newsDate
+{
+    padding-left: 20px;
+    padding-right: 10px;
+}
+/*文章总体模块*/
+#article
+{
+    margin-top:30px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/*文章标题*/
+#article>h3
+{
+    height: 45px;
+    line-height: 45px;
+    padding-left:10px;
+    background-color: #6cc5dc;
+    color: #fff;
+}
+
+.articleItem
+{
+    float: left;
+    width:275px;
+    height:350px;
+    position: relative;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+.articleItem:hover
+{
+    box-shadow:0 0 25px #e3e3e3 inset;
+}
+.articleItemImage:hover img
+{
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+.articleItemInformation
+{
+    margin-top: 150px;
+    margin-left: 80px;
+    width: 100%;
+    overflow: hidden;
+
+}
+.articleItemImage
+{
+    width:100%;
+    margin-top: 10px;
+    height: 160px;
+    text-align: center;
+}
+.articleItem img
+{
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+}
+/*底部人物栏总框架*/
+#character
+{
+    width: 1400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 40px auto;
+}
+
+/*任务栏标题*/
+#characterTopic
+{
+    background-color: #009966;
+    height: 45px;
+    line-height: 50px;
+    padding-left:10px;
+    color: white;
+}
+#characterList
+{
+    background-color: white;
+    overflow: hidden;
+    height: 320px;
+}
+.characterItem
+{
+    float: left;
+    width:349px;
+    height:300px;
+    border-right: 1px solid #e6e6e6;
+}
+/*上部图片*/
+.characterItemTop
+{
+    height: 160px;
+    text-align: center;
+}
+.characterItemTop h3
+{
+    text-align: center;
+    margin: 5px auto;
+}
+
+.characterItemTop img
+{
+    height: 140px;
+    margin-top: 20px;
+
+}
+/*下部文字信息*//*左右字体不“顶天立地”*/
+.characterItemBottom
+{
+    padding: 40px 15px;
+
+}
+
+.characterItemBottom ul li
+{
+    padding: 2px 5px;
+}
+.characterItemBottom ul li a
+{
+    color: black;
+}
+.characterItemBottom ul li a:hover
+{
+    color: #00a0e9;
+}
+.characterItemTop h3
+{
+    color: #00a0e9;
+}
+.characterItemBottom ul li span
+{
+    float: right;
+    color: #00c1de;
+    font-weight: bold;
+    padding: 2px 5px;
+}
+.footer
+{
+    border-top: 3px solid #e6e6e6;
+}
+.footerInfo
+{
+    width:1400px;
+    margin:0 auto;
+    height: 150px;
+}
+.footerInfoItem
+{
+    float: left;
+    margin-top: 22px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 0 50px 0;
+}
+.footerInfoItem p
+{
+    padding-top: 10px;
+    font-size: 13px;
+}
+.footerInfoItem h3
+{
+    font-weight: normal;
+}
+.footerInfoItem p a:link
+{
+    color: black;
+}
+.footerInfoItem p a:visited
+{
+    color: black;
+}
+.footerInfoItem p a:hover
+{
+    color: #00c1de;
+}
+#personalDescription
+{
+    float: right;
+    width: 440px;
+    margin-top: 20px;
+}
+#personalDescription h3
+{
+    text-align: center;
+
+}
+#personalDescription p
+{
+    text-indent: 50px;
+    font-size: 15px;
+}
+#finalModule
+{
+    width: 100%;
+    height: 60px;
+    background-color: #00c1de;
+    position: absolute;
+}
+#finalModule p
+{
+    text-align: center;
+    color: #606a74;
+    padding: 3px;
+}
+/*搜索区域*/
+#search
+{
+    margin-bottom: 350px;
+}
+#searchTop
+{
+    width: 474px;
+    padding:2% 5%;
+    background-color: yellowgreen;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#searchTop div
+{
+    float: right;
+}
+#searchTop input
+{
+    float:left;
+    width:440px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border:none;
+    color: white;
+    font-size: 15px;
+    margin-top: 2px;
+}
+input::-webkit-input-placeholder
+{
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+    font-family: Arial;
+    text-indent: 2px;
+}
+
+#searchTop div img
+{
+    width: 30px;
+    height: 30px;
+}
+#searchHot a
+{
+    float:left;
+    width:131px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #434343;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: white;
+}
+#searchHot a:hover
+{
+    box-shadow:0 0 25px #e3e3e3 inset;
+    transition-duration: .1s;
+}
+
+/*特别篇章*/
+#specialCharter
+{
+    width:100%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+#specialCharter>h3
+{
+    width:100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    padding-left: 10px;
+}
+.specialList ul li
+{
+    padding: 10px;
+    text-indent: 20px;
+}
+.specialList ul li a
+{
+    color: black;
+
+}
+.specialList ul li a:hover
+{
+    color: #6cc5dc;
+}
+
+/*友情链接*/
+#outLink
+{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 2px solid #e6e6e6;
+}
+#outLinkList
+{
+    height: 530px;
+}
+#outLink>h3
+{
+    width:100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: gray;
+    padding-left: 10px;
+
+}
+.outLinkItem
+{
+    float: left;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.outLinkItem a img
+{
+    width: 220px;
+    height: 220px;
+}
+/*飞行dora*/
+#stickyDora
+{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    position: fixed;
+    bottom: 700px;
+    width: 175px;
+    left: 1750px;
+    z-index: 8888;
+}
+
+#stickyDora img
+{
+    width: 50%;
+}
+
+#stickyDora:hover
+{
+    animation: dora 0.7s linear 0s;
+}
+@keyframes dora {
+    0% {
+        opacity: .4; }
+    100% {
+        opacity: 1; }
+}
+
+/*友情链接*/
+#outLink1
+{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 2px solid #e6e6e6;
+}
+#outLinkList1
+{
+    height: 350px;
+}
+#outLink1>h3
+{
+    width:100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ae4141;
+    padding-left: 10px;
+
+}
+.outLinkItem1
+{
+    float: left;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.outLinkItem1 a img
+{
+    width: 96px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/*底部文本*/
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    border-radius: 20px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/*下拉框*/
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+/* 触发弹窗图片的样式 */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* 弹窗背景 */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* 图片 */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* 文本内容 */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* 添加动画 */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* 关闭按钮 */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 小屏幕中图片宽度为 100% */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

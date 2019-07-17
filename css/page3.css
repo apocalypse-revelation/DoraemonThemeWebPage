@@ -1,0 +1,232 @@
+*
+{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    font-family: Arial,微软雅黑;
+    background: #00a8f4 url("../img4page1/PC_header_lower_doraemon.png") 750px 150px no-repeat;
+}
+#topAll{
+    width:100%;
+    margin: 10px auto;
+    height:120px;
+    background-color: #00a8f4;
+    border-bottom: 1px solid #e3e3e3;
+}
+#alogo
+{
+    float: left;
+    margin: 0px auto;
+    position: relative;
+    left: 500px;
+}
+#alogo img
+{
+
+    height: 90px;
+}
+#nav
+{
+    width: 50%;
+    position: relative;
+    float: left;
+    left: 500px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#nav ul li
+{
+    float: left;
+}
+#nav ul li a{
+    display: inline-block;
+    padding:20px;
+    height: 65px;
+    line-height: 60px;
+    color: #fff;
+}
+#nav ul li a:hover{
+    background-color: #6cc5dc;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px
+}
+#AllInfo
+{
+    width: 100%;
+    margin: 150px auto;
+}
+/**/
+#video
+{
+    width: 55%;
+    margin: 0 400px;
+}
+#videoSlide
+{
+    width: 100%;
+    border-radius: 20px;
+    border: 9px solid #e3e3e3;
+    background-color: white;
+    height: 1200px;
+}
+#videoSlideTitle
+{
+    background-color: #00a8f4;
+    margin: 30px auto;
+    text-align: center;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-weight: lighter;
+}
+#videoSlideTitle h3
+{
+    margin: 0 auto;
+    height: 60px;
+    position: relative;
+    top: 10px;
+    left: -24px;
+}
+#topInfo
+{
+    text-align: center;
+    margin: 0 20px;
+}
+#topInfo div
+{
+    margin: 5px 20px;
+}
+#main
+{
+    margin-left: 45px;
+    margin-top: 20px;
+    word-wrap: normal;
+}
+#main p
+{
+    padding: 20px 10px;
+    text-indent: 20px;
+}
+#main h3,#main h4
+{
+    padding: 5px 10px;
+}
+#mainImg
+{
+    margin-right: 20px;
+
+}
+#mainImg img
+{
+    border-radius: 30px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+/*按钮*/
+#button
+{
+    position: relative;
+    background-color: #e60000;
+    margin: 10px auto;
+    text-align: center;
+    width: 35%;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: lighter;
+    box-shadow: 2px 2px 2px black ;
+
+}
+#button a h5
+{
+    margin: 0 auto;
+    height: 70px;
+    position: relative;
+    top: 9px;
+    left: -1px;
+    color: white;
+}
+#button:hover
+{
+    transform: scale(1.2);
+}
+
+.footer
+{
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+    border-top: 1px solid #e3e3e3;
+}
+.footerInfo
+{
+    width: 100%;
+    margin:0 auto;
+    height: 150px;
+}
+.footerInfoItem
+{
+    float: left;
+    margin: 10px 170px;
+    padding: 0 50px 0;
+}
+.footerInfoItem p
+{
+    padding-top: 10px;
+    font-size: 13px;
+}
+.footerInfoItem h3
+{
+    font-weight: normal;
+}
+.footerInfoItem p a:link
+{
+    color: black;
+}
+.footerInfoItem p a:visited
+{
+    color: black;
+}
+.footerInfoItem p a:hover
+{
+    color: #00c1de;
+}
+#personalDescription
+{
+    float: left;
+    width: 440px;
+    margin: 10px 230px;
+}
+#personalDescription h3
+{
+    text-align: center;
+    font-weight: lighter;
+}
+#personalDescription p
+{
+    text-indent: 50px;
+    font-size: 15px;
+}
+#finalModule
+{
+    border-top: 1px solid #e3e3e3;
+    width: 1900px;
+    height: 60px;
+    background-color: #00a0e9;
+    position: absolute;
+}
+#finalModule p
+{
+    text-align: center;
+    color: #606a74;
+    padding: 3px;
+}
+#bottomBackground img
+{
+    width: 100%;
+}
